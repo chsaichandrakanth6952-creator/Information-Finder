@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiGlimpse - Quick Topic Summaries</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <h1>WikiGlimpse</h1>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </header>
+
+    <div class="page-content container">
+        <div class="main-content">
+            <main class="card">
+                <p class="intro-text">Enter any topic to get a summary from Wikipedia.</p>
+                <section class="search-section">
+                    <form id="topic-form">
+                        <label for="topic-input" class="sr-only">Topic</label>
+                        <input type="text" id="topic-input" placeholder="e.g., Artificial Intelligence" required>
+                        <button type="submit">Get Info</button>
+                    </form>
+                </section>
+        
+                <section class="result-section" aria-live="polite">
+                    <div id="loading-indicator" class="loader"></div>
+                    <article id="result-container">
+                        <p id="initial-message">Your search results will appear here.</p>
+                    </article>
+                </section>
+            </main>
+        
+            <section id="featured-topics">
+                <h2>Or try one of these topics:</h2>
+                <div class="topic-grid">
+                    <button class="topic-btn">Quantum Computing</button>
+                    <button class="topic-btn">The Renaissance</button>
+                    <button class="topic-btn">CRISPR</button>
+                    <button class="topic-btn">Black Holes</button>
+                </div>
+            </section>
+        </div>
+
+        <aside id="history-sidebar" class="card">
+            <h2>Recent Searches</h2>
+            <ul id="history-list"></ul>
+            <p id="history-placeholder">Your recent searches will appear here.</p>
+        </aside>
+    </div>
+
+    <footer class="site-footer-bottom">
+        <div class="container">
+            <p>&copy; 2024 WikiGlimpse. Powered by Wikipedia.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
